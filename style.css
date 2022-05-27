@@ -1,24 +1,75 @@
-* {
+*{    
     margin: 0;
     padding: 0;
-    background: #e5e5e5;
-    font-family: "inter" sans-serif;
+    /*background: #e5e5e5;*/
+    font-family: "intel" sans-serif;
     font-weight: 400;
     font-size: 32px;
     line-height: 150%;
 }
 
-main{
-    display: flex;
+body{
+    margin-left: 1em;
+    width: 1300px;
+    background: rgb(17, 146, 231);
+}
+.vector{
+    margin: 30px 0px 0px 30px;
 }
 
+main{
+    width: 100%;
+    display: flex;
+    border: 5px solid black;
+}
+
+.sectionUno{
+    margin-left: 2em;
+}
 .input-text{
-    margin-top: 90px;
+    margin-top: 80px;
+    align-items: center;
+}
+.botonEncriptar{
+    border: 1px solid rgb(7, 7, 7);
+    border-radius: 10px;
+}
+.botonDesencriptar{
+    border: 1px solid rgb(7, 7, 7);
+    border-radius: 10px;
+}
+
+.sectionDos{
+    width: 350px;
+    height: 520px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid rgb(7, 7, 7);
+    margin-left: 2em;
+    background: white;
 }
 
 .input-text-area{
-    margin-top: 20px;
+    margin-top: 2px;
     position: relative;
-    margin-left: 90px;
+    border: none;
+}
+.muñeco{
+    width: 250px;
+}
+.botonCopiar{
+    height: 60px;
+    width: 120px;
+    margin-right: 5%;
+    border: 1px solid rgb(7, 7, 7);
+    border-radius: 10px;
 }
 
+@media screen and (max-width:880px){
+body , main {
+    width: 100% auto;
+}
+.sectionDos{
+    margin-left: 10%;
+}
+}
