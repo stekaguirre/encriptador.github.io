@@ -2,6 +2,7 @@
 <html lang="esp">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
     <title>ENCRIPTADOR DE TEXTO</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,19 +11,22 @@
 </head>
 <body>
     <header>
-        <img src="../imagenes/Vector.png">
+        <img class="vector" src="../imagenes/Vector.png">
     </header>
     <main>
         <section class="sectionUno">
-            <textarea type="text" class="input-text" cols="40" rows="6" placeholder="INGRESA EL TEXTO AQUI" ></textarea>
-            <H6>solo letras minusculas y sin asento</H6>
+            <textarea type="text" class="input-text" cols="35" rows="7" placeholder="INGRESA EL TEXTO AQUI" ></textarea>
+            <h1>solo letras minusculas y sin asento</h1>
             <div>
-                <button type="button" onclick="botonEncriptar()" >ENCRIPTAR</button>
-                <button type="button">DESENCRIPTAR</button>
+                <button class="botonEncriptar" type="button" onclick="botonEncriptar()" >ENCRIPTAR</button>
+                <button class="botonDesencriptar" type="button">DESENCRIPTAR</button>
             </div>
         </section>
         <section class="sectionDos">
-            <textarea type="text" class="input-text-area" cols="40" rows="6" placeholder="RESULTADO ENCRIPTADO" ></textarea>
+                <textarea type="text" class="input-text-area" cols="18" rows="2"></textarea>
+                <img class="muñeco" src="../imagenes/Muñeco.png" alt="">
+                <h3>ningun mensaje fue encontrado</h3>
+                <button class="botonCopiar" type="button">copiar</button>    
         </section>
     </main>
 </body>

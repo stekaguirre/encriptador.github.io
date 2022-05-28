@@ -1,9 +1,24 @@
+*{    
+    margin: 0;
+    padding: 0;
+    /*background: #e5e5e5;*/
+    font-family: "intel" sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+}
+
 body{
-    width: 930px;
-    font-family: "inter" sans-serif;
+    margin-left: 1em;
+    width: 1300px;
+    background: #E5E5E5;
+}
+.vector{
+    margin: 30px 0px 0px 30px;
 }
 
 main{
+    width: 100%;
     display: flex;
     width: 940px;
 }
@@ -11,15 +26,57 @@ main{
     width: 100%;
 }
 
+.sectionUno{
+    margin-left: 2em;
+}
 .input-text{
-    width: 50%;
-    margin-top: 90px;
+    margin-top: 40px;
+    align-items: center;
+    border: none;
+    background: #E5E5E5;
+}
+.botonEncriptar{
+    border: 1px solid rgb(7, 7, 7);
+    border-radius: 10px;
+    background:#0A3871;
+}
+.botonDesencriptar{
+    border: 1px solid rgb(7, 7, 7);
+    border-radius: 10px;
+    background: #D8DFE8;
+
+}
+
+.sectionDos{
+    width: 350px;
+    height: 540px;
+    text-align: center;
+    border-radius: 5px;
+    margin-left: 2em;
+    background: white;
 }
 
 .input-text-area{
-    width: 50%;
-    margin-top: 90px;
     position: relative;
-    margin: left 50%;
+    border: none;
+}
+.muñeco{
+    width: 250px;
+}
+.botonCopiar{
+    height: 60px;
+    width: 120px;
+    margin-right: 5%;
+    border: 1px solid rgb(7, 7, 7);
+    border-radius: 10px;
+    background: #D8DFE8;
 }
 
+@media screen and (max-width:880px){
+body , main {
+    width: 100% auto;
+}
+.sectionDos{
+    margin-left: 10%;
+}
+}
