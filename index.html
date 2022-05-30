@@ -15,18 +15,19 @@
     </header>
     <main>
         <section class="sectionUno">
-            <textarea type="text" class="input-text" cols="35" rows="7" placeholder="INGRESA EL TEXTO AQUI" ></textarea>
+            <textarea type="text" id="mensaje" cols="35" rows="7" placeholder="INGRESA EL TEXTO AQUI" ></textarea>
             <h1>solo letras minusculas y sin asento</h1>
             <div>
-                <button class="botonEncriptar" type="button" onclick="botonEncriptar()" >ENCRIPTAR</button>
-                <button class="botonDesencriptar" type="button">DESENCRIPTAR</button>
+                <button id="encriptar" type="button" onclick="botonEncriptar()" >ENCRIPTAR</button>
+                <button id="desencriptar" type="button">DESENCRIPTAR</button>
             </div>
         </section>
         <section class="sectionDos">
-                <textarea type="text" class="input-text-area" cols="18" rows="2"></textarea>
+                <!--<textarea type="text" class="input-text-area" cols="18" rows="2"></textarea>-->
+                <input type="text" id="resultado" placeholder="resultado">
                 <img class="muñeco" src="../imagenes/Muñeco.png" alt="">
                 <h3>ningun mensaje fue encontrado</h3>
-                <button class="botonCopiar" type="button">copiar</button>    
+                <button  id="copiar">copiar</button>    
         </section>
     </main>
 </body>

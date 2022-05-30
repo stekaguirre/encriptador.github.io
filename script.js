@@ -1,18 +1,42 @@
-const inputTexto = document.querySelector(".input-text");
-const mensaje = document.querySelector(".input-text-area");
+const inputMensaje = document.querySelector("#mensaje");
+const inputResultado = document.querySelector("#resultado");
 
-function botonEncriptar(){
-    const textoEncriptado = encriptar(inputTexto.value);
-    mensaje.value = textoEncriptado;
+const btnEncriptar = document.querySelector("#encriptar");
+const btnDesencriptar = document.querySelector("#desencriptar");
+const btnCopiar = document.querySelector("#copiar");
+
+
+function encriptar (){
+    var mensaje = inputMensaje.value;
+    var mensajeEncriptado = mensaje
+    .replaceAll("e","enter")
+    .replaceAll("i","ines")
+    .replaceAll("o","ober")
+    .replaceAll("a","ai")
+    .replaceAll("u","ufat");
+    
+    inputResultado.value = mensajeEncriptado;
 }
 
-function encriptar(StringParaEncriptar){
-    let matrizCodigo = [["e","enter"],["i","ines"],["a","ai"],["o","ober"],["u","ufat"]]
-    StringParaEncriptar = StringParaEncriptar.toLowerCase();
-    for (let i= 0; i< matrizCodigo.length; i++){
-        if(StringParaEncriptar.includes(matrizCodigo[i][0])){
-            StringParaEncriptar = StringParaEncriptar.replaceAll(matrizCodigo[i][0],matrizCodigo[i][1])
-        }
-    }
-    return StringParaEncriptar;
+function desencriptar (){
+    var mensaje = inputMensaje.value;
+    var mensajeEncriptado = mensaje
+    .replaceAll("enter","e")
+    .replaceAll("ines","i")
+    .replaceAll("ober","o")
+    .replaceAll("ai","a")
+    .replaceAll("ufat","u");
+
+    inputResultado.value = mensajeEncriptado;
 }
+
+function copiar (){
+    var mensajeEncriptado = inputResultado.value;
+    navigator.clipboard.writeText(mensajeEncriptado);
+}
+
+btnEncriptar.onclick = encriptar;
+btnDesencriptar.onclick = desencriptar;
+btnCopiar.onclick = copiar;
+
+
